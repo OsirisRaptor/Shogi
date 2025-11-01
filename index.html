@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Shogi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>English Shogi</h1>
+            <p class="subtitle">Japanese Chess - English Edition</p>
+        </header>
+        
+        <div class="game-area">
+            <div class="side-panel left">
+                <div class="captured-pieces">
+                    <h3>Captured by Black</h3>
+                    <div id="black-captured" class="captured-list"></div>
+                </div>
+            </div>
+            
+            <div class="board-container">
+                <div id="board" class="board"></div>
+                <div class="board-info">
+                    <div id="current-player" class="current-player">Current Player: Black</div>
+                    <div id="game-status" class="game-status">Game in progress</div>
+                </div>
+            </div>
+            
+            <div class="side-panel right">
+                <div class="captured-pieces">
+                    <h3>Captured by White</h3>
+                    <div id="white-captured" class="captured-list"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="reset-btn" class="btn">Reset Game</button>
+            <button id="undo-btn" class="btn">Undo Move</button>
+        </div>
+        
+        <div id="promotion-modal" class="modal">
+            <div class="modal-content">
+                <h3>Promote Piece?</h3>
+                <p>This piece can be promoted</p>
+                <div class="modal-buttons">
+                    <button id="promote-yes" class="btn">Promote</button>
+                    <button id="promote-no" class="btn">Don't Promote</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="drop-modal" class="modal">
+            <div class="modal-content">
+                <h3>Drop Piece</h3>
+                <p>Click on a square to drop the selected piece</p>
+                <button id="cancel-drop" class="btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
